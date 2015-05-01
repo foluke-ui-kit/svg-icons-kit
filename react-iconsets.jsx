@@ -19,24 +19,12 @@ var svg;
  * Briefly describe your Element here
  */
 
-var SvgIconset = React.createClass({
-
-    render: function () {
-        return (
-            <div>
-                <h1>SvgIconSet</h1>
-                <div className="description">Component Documentation here, hare writing over and over....</div>
-            </div>
-        );
-    }
-
-});
 
 
 /**
  * setup your react component
  */
-SvgIconset.Iconset = React.createClass({
+SvgIconset = React.createClass({
 
     /**
      * set your prop validations
