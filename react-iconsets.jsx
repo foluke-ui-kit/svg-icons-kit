@@ -14,31 +14,17 @@
 var React = require('react');
 var ObjectAssign = require('object-assign');
 var $ = require('jquery');
-
 var svg;
 /**
  * Briefly describe your Element here
  */
 
-var SvgIconset = React.createClass({
-
-    render: function () {
-        return (
-            <div>
-                <h1>SvgIconSet</h1>
-
-                <div className="description"> An svg Icon set for react</div>
-            </div>
-        );
-    }
-
-});
 
 
 /**
  * setup your react component
  */
-SvgIconset.Iconset = React.createClass({
+SvgIconset = React.createClass({
 
     /**
      * set your prop validations
@@ -51,7 +37,14 @@ SvgIconset.Iconset = React.createClass({
      *  optionalObject: React.PropTypes.object,
      *  optionalString: React.PropTypes.string,
      */
-    //propTypes: {},
+    displayName: "SvgIconset",
+
+    propTypes: {
+        size: React.PropTypes.string,
+        name: React.PropTypes.string,
+        iconID: React.PropTypes.string,
+        iconsetUrl: React.PropTypes.string
+    },
 
     /**
      * define misins
@@ -72,7 +65,8 @@ SvgIconset.Iconset = React.createClass({
             size: '48',
             style: {fill: ''},
             iconsetUrl: '',
-            svgRef: 'svgbox'
+            svgRef: 'svgbox',
+            svg: ''
         }
     },
 
@@ -94,17 +88,18 @@ SvgIconset.Iconset = React.createClass({
      *
      */
     componentDidMount: function () {
+
         var ref = this.props.svgRef;
         var xml = this.props.iconsetUrl ;
         var icon = '#' +this.props.iconID;
         // use jquery to parse xml and find icon
-        var been_there;
-        $.get(xml, function (data) {
-            been_there = $(data).find(icon);
-            $(icon).html(been_there.html());
-            //console.log(been_there.html() + '....');
-        });
-        
+        var svg;
+          $.get(xml, function (data) {
+               svg = $(data).find(icon).html();
+               $(icon).html(svg);
+               console.log(clean + '....' + svg);
+           }
+          )
     },
 
     /**
@@ -113,6 +108,7 @@ SvgIconset.Iconset = React.createClass({
     //componentWillUnmount: function () {},
 
     render: function () {
+
 
         var styles = {
             fill: this.props.fill,
