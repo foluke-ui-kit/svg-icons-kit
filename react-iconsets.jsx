@@ -94,12 +94,18 @@ SvgIconset = React.createClass({
         var icon = '#' +this.props.iconID;
         // use jquery to parse xml and find icon
         var svg;
-          $.get(xml, function (data) {
-               svg = $(data).find(icon).html();
-               $(icon).html(svg);
-               console.log(clean + '....' + svg);
-           }
-          )
+
+        $.ajax({
+            type: "GET",
+            url: this.props.iconsetUrl,
+            dataType: "xml",
+            success: function(xml) {
+                var a = $(xml).find(icon);
+                console.log(a.html() + 'xml data')
+                svg = a.html();
+                $(icon).html(svg)
+            }.bind(this)
+        });
     },
 
     /**
