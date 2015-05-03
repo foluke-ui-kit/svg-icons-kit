@@ -14,7 +14,8 @@ Installing via NPM
 
 Iconsets allow you to load complete iconsets like those created by the [Polymer team ](https://github.com/Polymer/core-icons)
 
-```
+```js
+
 var Svg = require('@shawnsandy/svg-icons-kit');
 React.render(<Svg.SvgIconsets iconID="directions" iconsetUrl="icon.xml" size="48" fill="red"  />, document.getElementById('iconset'));
 
