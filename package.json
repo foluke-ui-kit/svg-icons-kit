@@ -23,5 +23,15 @@
   "bugs": {
     "url": "https://github.com/foluke-ui-kit/svg-icons-kit/issues"
   },
-  "homepage": "https://github.com/foluke-ui-kit/svg-icons-kit#readme"
+  "homepage": "https://github.com/foluke-ui-kit/svg-icons-kit#readme",
+  "devDependencies": {
+    "file-loader": "^0.8.1",
+    "jquery": "^2.1.4",
+    "jsx-loader": "^0.13.2",
+    "object-assign": "^2.0.0",
+    "react": "^0.13.2",
+    "style-loader": "^0.12.1",
+    "url-loader": "^0.5.5",
+    "webpack": "^1.8.11"
+  }
 }
