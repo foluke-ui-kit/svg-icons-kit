@@ -1,5 +1,5 @@
 {
-  "name": "svg-icons-kit",
+  "name": "@shawnsandy/svg-icons-kit",
   "version": "0.0.3",
   "description": "Use SvG icons/iconsets with react components",
   "main": "index.js",
