@@ -6,13 +6,20 @@
  */
 
 var webpack = require('webpack');
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('libs.js');
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin({
+    filename: 'libs.js',
+    minChunks: 2
+});
 
 module.exports = {
-    entry: "./index",
+    entry: {
+        reactIconset: './react-iconsets',
+        svgIcons: './svg-icons'
+    },
     output: {
         path: './build/',
-        filename: "svg-iconsets.js"
+        filename: '[name].min.js',
+        publicPath: './'
     },
     module: {
         loaders: [

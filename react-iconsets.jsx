@@ -13,7 +13,8 @@
  */
 var React = require('react');
 var ObjectAssign = require('object-assign');
-var $ = require('jquery');
+var $ = require('./package/zepto/zepto.min');
+var Inject = require('svg-injector');
 var svg;
 /**
  * Briefly describe your Element here
@@ -133,7 +134,9 @@ SvgIconset = React.createClass({
 });
 
 
+
 /**
  * export the element
  */
 module.exports = SvgIconset;
+

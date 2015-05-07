@@ -1,5 +1,5 @@
 # svg-icons-kit
-________________
+
 
 A simple toolkit for loading SVG Icons in your react projects
 

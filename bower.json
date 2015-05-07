@@ -1,0 +1,20 @@
+{
+  "name": "svg-icons-kit",
+  "main": "index.js",
+  "version": "0.0.4",
+  "homepage": "https://github.com/foluke-ui-kit/svg-icons-kit",
+  "authors": [
+    "Shawn Sandy <shawnsandy04@gmail.com>"
+  ],
+  "description": "SVG Icons for react.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "React"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "zepto": "~1.1.6"
+  }
+}

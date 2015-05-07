@@ -26,6 +26,8 @@
   "homepage": "https://github.com/foluke-ui-kit/svg-icons-kit#readme",
   "devDependencies": {
     "file-loader": "^0.8.1",
+    "gulp": "^3.8.11",
+    "gulp-spawn": "^0.3.0",
     "jquery": "^2.1.4",
     "jsx-loader": "^0.13.2",
     "object-assign": "^2.0.0",

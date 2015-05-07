@@ -1,9 +1,4 @@
 /**
- * Created by shawnsandy on 4/25/15.
- */
-
-
-/**
  * @jsx React.DOM
  */
 
@@ -13,6 +8,8 @@
  */
 var React = require('react');
 var Inject = require('svg-injector');
+var $ = require('./package/zepto/zepto.min');
+
 
 
 
