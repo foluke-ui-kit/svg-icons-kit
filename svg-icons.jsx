@@ -8,7 +8,7 @@
  */
 var React = require('react');
 var Inject = require('svg-injector');
-var $ = require('./package/zepto/zepto.min');
+var $ = require('wlt-zepto');
 
 
 

@@ -13,7 +13,7 @@
  */
 var React = require('react');
 var ObjectAssign = require('object-assign');
-var $ = require('./package/zepto/zepto.min');
+var $ = require('wlt-zepto');
 var Inject = require('svg-injector');
 var svg;
 /**
