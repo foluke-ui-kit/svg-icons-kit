@@ -13,7 +13,8 @@
  */
 var React = require('react');
 var ObjectAssign = require('object-assign');
-var $ = require('jquery');
+var $ = require('wlt-zepto');
+var Inject = require('svg-injector');
 var svg;
 /**
  * Briefly describe your Element here
@@ -101,7 +102,7 @@ SvgIconset = React.createClass({
             dataType: "xml",
             success: function(xml) {
                 var a = $(xml).find(icon);
-                //console.log(a.html() + 'xml data')
+                console.log(a.html() + 'xml data')
                 svg = a.html();
                 $(icon).html(svg)
             }.bind(this)
@@ -133,7 +134,9 @@ SvgIconset = React.createClass({
 });
 
 
+
 /**
  * export the element
  */
 module.exports = SvgIconset;
+
