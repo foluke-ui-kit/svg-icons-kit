@@ -1,7 +1,7 @@
 # svg-icons-kit
 
 
-A simple toolkit for loading SVG Icons in your react projects (asana)
+A simple toolkit for loading SVG Icons in your react projects
 
 ## Installation
 
