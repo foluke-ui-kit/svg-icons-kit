@@ -14,7 +14,8 @@ var commonsPlugin = new webpack.optimize.CommonsChunkPlugin({
 module.exports = {
     entry: {
         reactIconset: './react-iconsets',
-        svgIcons: './svg-icons'
+        svgIcons: './svg-icons',
+        //sample: './sample'
     },
     output: {
         path: './build/',

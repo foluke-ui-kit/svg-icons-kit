@@ -102,7 +102,7 @@ SvgIconset = React.createClass({
             dataType: "xml",
             success: function(xml) {
                 var a = $(xml).find(icon);
-                //console.log(a.html() + 'xml data')
+                console.log(a.html() + 'xml data')
                 svg = a.html();
                 $(icon).html(svg)
             }.bind(this)
