@@ -8,7 +8,7 @@
  */
 var React = require('react');
 var Inject = require('svg-injector');
-var $ = require('wlt-zepto');
+var $ = require('jquery');
 
 
 
@@ -19,85 +19,43 @@ var $ = require('wlt-zepto');
 
 var SVGIcons = React.createClass({
 
-    render: function () {
-        return (
-            <div>
+    displayName: "SvgIcon",
 
-                <div className="description"> Svg Icons</div>
-            </div>
-        );
-    }
+    propTypes: {
+        size: React.PropTypes.string
+    },
+    getDefaultProps: function (){
 
-});
-
-
-/**
- * setup your react component
- */
-SVGIcons.Child = React.createClass({
-
-    /**
-     * set your prop validations
-     *  // You can declare that a prop is a specific JS primitive. By default, these
-     *  // are all optional.
-     *  optionalArray: React.PropTypes.array,
-     *  optionalBool: React.PropTypes.bool,
-     *  optionalFunc: React.PropTypes.func,
-     *  optionalNumber: React.PropTypes.number,
-     *  optionalObject: React.PropTypes.object,
-     *  optionalString: React.PropTypes.string,
-     */
-    //propTypes: {},
-
-    /**
-     * define misins
-     */
-    //mixins: [],
-
-    /**
-     * Set the default values for your states
-     */
-    //getInitialState: function () {},
-
-    /**
-     * det the props default
-     */
-    getDefaultProps: function () {
         return {
-            svgFile: 'John Hannock'
+            size: '48px',
+            fill: 'blue'
 
         }
-    },
-
-    /**
-     *
-     */
-    //componentWillMount: function () {},
-
-    /**
-     *
-     */
-    //componentWillReceiveProps: function () {},
-
-    /**
-     *
-     */
-    componentDidMount: function () {
 
     },
 
-    /**
-     *
-     */
-    //componentWillUnmount: function () {},
+    componentDidMount: function() {
+
+        // Elements to inject
+        //var mySVGsToInject = document.querySelectorAll('img.inject-me');
+        var mySVGsToInject = React.findDOMNode(this.refs.inject);
+        // Do the injection
+        Inject(mySVGsToInject);
+
+    },
 
     render: function () {
+
         return (
-            <div className="hello">
-                Hello { this.props.name }
+
+
+            <div>
+                <div ref=""  className="description"> Svg Icons</div>
+                <img ref="inject" className="inject-me" src="flashlight.svg" />
             </div>
         );
     }
+
 });
 
 
