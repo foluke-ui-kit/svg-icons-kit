@@ -32,7 +32,7 @@ var SVGIcons = React.createClass({
             size: '48px',
             fill: 'blue',
             iconSrc: 'flashlight.svg',
-            png: 'default.png',
+            pngSrc: 'default.png',
             classname: 'svg'
 
         }
@@ -56,7 +56,7 @@ var SVGIcons = React.createClass({
 
 
         return (
-        <img ref="inject" className={this.props.classname} src={this.props.iconSrc} data-fallback={this.props.png} />
+        <img ref="inject" className={this.props.classname} src={this.props.iconSrc} data-fallback={this.props.pngSrc} />
         );
     }
 
