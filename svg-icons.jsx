@@ -40,8 +40,12 @@ var SVGIcons = React.createClass({
         // Elements to inject
         //var mySVGsToInject = document.querySelectorAll('img.inject-me');
         var mySVGsToInject = React.findDOMNode(this.refs.inject);
+        //options
+        var options = {
+            evalScripts: 'never'
+        }
         // Do the injection
-        Inject(mySVGsToInject);
+        Inject(mySVGsToInject, options);
 
     },
 
