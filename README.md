@@ -38,7 +38,10 @@ Import SVG icons
 ```js
 
 var Svg = require('@shawnsandy/svg-icons-kit');
-render(<Svg.SvgIcon classname="svg-icon" iconSrc="flashlight" png="some.png" />, 
+render(<Svg.SvgIcon 
+classname="svg-icon" 
+iconSrc="flashlight" 
+pngSrc="some.png" />, 
 document.getElementById('icon));
 
 ```
