@@ -22,14 +22,18 @@ var SVGIcons = React.createClass({
     displayName: "SvgIcon",
 
     propTypes: {
-        size: React.PropTypes.string
+        size: React.PropTypes.string.isRequired,
+        iconSrc: React.PropTypes.string.isRequired,
+        classs: React.PropTypes.string
     },
     getDefaultProps: function (){
 
         return {
             size: '48px',
             fill: 'blue',
-            iconSrc: 'flashlight.svg'
+            iconSrc: 'flashlight.svg',
+            png: 'default.png',
+            classname: 'svg'
 
         }
 
@@ -38,7 +42,6 @@ var SVGIcons = React.createClass({
     componentDidMount: function() {
 
         // Elements to inject
-        //var mySVGsToInject = document.querySelectorAll('img.inject-me');
         var mySVGsToInject = React.findDOMNode(this.refs.inject);
         //options
         var options = {
@@ -51,11 +54,9 @@ var SVGIcons = React.createClass({
 
     render: function () {
 
+
         return (
-
-
-                <img ref="inject" className="inject-me" src={this.props.iconSrc} />
-
+        <img ref="inject" className={this.props.classname} src={this.props.iconSrc} data-fallback={this.props.png} />
         );
     }
 
