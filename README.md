@@ -60,7 +60,7 @@ document.getElementById('icon));
 Public release
 
 ##Licence
--------------
+
 
 The MIT License (MIT)
 
